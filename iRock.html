@@ -3,10 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <title>iRock - The Virtual Pet Rock</title>
+        <script type="text/javascript">
+            function touchRock(){
+                let userName=prompt("What is your name?", "Enter your name here.");
+                if (userName){
+                    alert("It's good to meet you,"+userName+".");
+                    document.getElementById("rockImg") .src="./images/rock_happy.png";
+                    
+                    
+                }
+            }
+        </script>
     </head>
-    <body>
+    <body onload="alert('Hello, I am your pet rock.');">
         <div style="margin-top:100px; text-align:center">
-        <img id="rockImg" src="./images/rock.png" alt="iRock" />
+        <img id="rockImg" src="./images/rock.png" alt="iRock" style="cursor:pointer" onclick="touchRock()" />
         </div>
     </body>
 </html>
